@@ -1,13 +1,16 @@
 [project]
 name = "cyphnapse"
 version = "0.1.0"
-description = "Add your description here"
+description = "Graph Memory Layer for AI Agents"
 readme = "README.md"
 authors = [
     { name = "edilrey", email = "joshedilreydeguzman@gmail.com" }
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "graphqlite>=0.3.0",
+    "pydantic>=2.0.0",
+]
 
 [project.scripts]
 cyphnapse = "cyphnapse:main"
@@ -20,6 +23,8 @@ build-backend = "uv_build"
 dev = [
     "pre-commit>=4.6.2",
     "ruff>=0.16.5",
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
 ]
 
 [tool.ruff]
