@@ -1,3 +1,8 @@
+"""Data models for Graph Memory Layer.
+
+These models are compatible with GraphQLite's API.
+"""
+
 import uuid
 from dataclasses import dataclass
 from datetime import datetime
@@ -40,7 +45,7 @@ class Graph:
 class Node:
     id: str = None
     graph_id: str = None
-    node_type: str | None = None
+    label: str | None = None
     name: str | None = None
     properties: dict[str, Any] = None
 
