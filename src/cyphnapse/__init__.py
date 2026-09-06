@@ -1,9 +1,10 @@
 """Graph Memory Layer for AI Agents."""
 
+from cyphnapse.core import GraphKernel
 from cyphnapse.models import (
     Edge,
-    Evidence,
     Event,
+    Evidence,
     Graph,
     Node,
     NodeType,
@@ -17,6 +18,7 @@ __all__ = [
     "Evidence",
     "Event",
     "Graph",
+    "GraphKernel",
     "Node",
     "NodeType",
     "Property",
