@@ -7,15 +7,15 @@ from typing import Any
 from graphqlite import Graph
 
 __all__ = [
-    "GraphKernel",
+    "GraphCore",
 ]
 
 
-class GraphKernel:
+class GraphCore:
     """Core graph memory functionality using GraphQLite Cypher queries."""
 
     def __init__(self, db_path: str = ":memory:"):
-        """Initialize the GraphQLite graph kernel.
+        """Initialize the GraphQLite graph core.
 
         Args:
             db_path: Path to SQLite database file (':memory:' for in-memory)

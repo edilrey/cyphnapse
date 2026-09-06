@@ -997,7 +997,7 @@ These boundaries are important.
 
 # 25. Preliminary Development Strategy
 
-### Stage 1: Graph kernel
+### Stage 1: Graph core
 
 Build:
 
