@@ -25,6 +25,7 @@ dev = [
     "ruff>=0.16.5",
     "pytest>=7.0.0",
     "pytest-cov>=4.0.0",
+    "pyrefly>=1.2.0",
 ]
 
 [tool.ruff]
@@ -37,3 +38,9 @@ select = ["E", "F", "I", "UP", "B"]
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
+
+[tool.pyrefly]
+project-includes = [
+    "**/*.py*",
+    "**/*.ipynb",
+]

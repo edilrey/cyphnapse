@@ -37,17 +37,17 @@ class RelationshipType(Enum):
 
 @dataclass
 class Graph:
-    id: str = None
+    id: str | None = None
     name: str = "default"
 
 
 @dataclass
 class Node:
-    id: str = None
-    graph_id: str = None
+    id: str | None = None
+    graph_id: str | None = None
     label: str | None = None
     name: str | None = None
-    properties: dict[str, Any] = None
+    properties: dict[str, Any] | None = None
 
     def __post_init__(self):
         if self.id is None:
@@ -58,12 +58,12 @@ class Node:
 
 @dataclass
 class Edge:
-    id: str = None
-    graph_id: str = None
-    source_node_id: str = None
-    target_node_id: str = None
+    id: str | None = None
+    graph_id: str | None = None
+    source_node_id: str | None = None
+    target_node_id: str | None = None
     relationship_type: str | None = None
-    properties: dict[str, Any] = None
+    properties: dict[str, Any] | None = None
     valid_from: datetime | None = None
     valid_until: datetime | None = None
 
@@ -76,10 +76,10 @@ class Edge:
 
 @dataclass
 class Evidence:
-    id: str = None
-    graph_id: str = None
-    source: str = None
-    content: str = None
+    id: str | None = None
+    graph_id: str | None = None
+    source: str | None = None
+    content: str | None = None
     timestamp: datetime | None = None
     type: str | None = None
     confidence: float | None = None
@@ -99,12 +99,12 @@ class Property:
 
 @dataclass
 class Event:
-    id: str = None
-    graph_id: str = None
-    timestamp: datetime = None
+    id: str | None = None
+    graph_id: str | None = None
+    timestamp: datetime | None = None
     description: str | None = None
-    related_nodes: list[str] = None
-    related_edges: list[str] = None
+    related_nodes: list[str] | None = None
+    related_edges: list[str] | None = None
 
     def __post_init__(self):
         if self.id is None:
@@ -117,13 +117,13 @@ class Event:
 
 @dataclass
 class Source:
-    id: str = None
-    graph_id: str = None
-    type: str = None
+    id: str | None = None
+    graph_id: str | None = None
+    type: str | None = None
     url: str | None = None
     citation: str | None = None
     title: str | None = None
-    metadata: dict[str, Any] = None
+    metadata: dict[str, Any] | None = None
 
     def __post_init__(self):
         if self.id is None:
